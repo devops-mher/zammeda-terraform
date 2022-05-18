@@ -216,6 +216,15 @@ locals {
           domain_name   = "zammad-0.com"
 
         }
+        zammad-1-prod = {
+          instance_name = "zammad-1-prod"
+          network       = "vpc-prod"
+          subnetwork    = "app-subnet-prod"
+          tags          = ["allow-https-ingress-prod"]
+          template_file = "app.sh.tpl"
+          domain_name   = "zammad-1.com"
+
+        }
       }
 
       tags = {
